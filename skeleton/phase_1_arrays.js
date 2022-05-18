@@ -40,4 +40,20 @@ Array.prototype.transpose = function() {
     return transposed;
 }
 
-console.log([[1,2,3],[1,2,3],[1,2,3]].transpose());
+// console.log([[1,2,3],[1,2,3],[1,2,3]].transpose());
+
+function screamWhisper(num){
+    if (num % 2 === 0){
+        console.log('!we even!');
+    } else {
+        console.log('?you odd?');
+    }
+}
+
+Array.prototype.myEach = function(cb) {
+    for (let i = 0; i < this.length; i++){
+        cb(this[i]);
+    }
+}
+
+console.log([1,2,3,4,5,6].myEach(screamWhisper))
